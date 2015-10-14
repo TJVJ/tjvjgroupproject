@@ -5,3 +5,18 @@ html {
 *::after,
 *::before {
   box-sizing: inherit; }
+
+.side {
+  position: fixed;
+  left: 10px;
+  top: 0px;
+  list-style: none;
+  padding-left: 0px;
+  text-decoration: none; }
+  .side a {
+    text-decoration: none; }
+
+.container {
+  margin: 0 auto;
+  width: 900px;
+  height: 4000px; }
