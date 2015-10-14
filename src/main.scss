@@ -1,2 +1,14 @@
-@import "bourbon/bourbon";
-@import "neat/neat";
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
+.side {
+  position: fixed;
+  left: 10px;
+  top: 0px;
+  list-style: none;
+  padding-left: 0px;
+  text-decoration: none;
+    a {
+      text-decoration: none;
+    }
+}
