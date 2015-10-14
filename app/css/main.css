@@ -6,17 +6,26 @@ html {
 *::before {
   box-sizing: inherit; }
 
-.side {
+.everything {
+  margin: 0 auto;
+  overflow: auto; }
+
+.side-left {
+  overflow: hidden;
+  width: 30%;
   position: fixed;
   left: 10px;
   top: 0px;
   list-style: none;
   padding-left: 0px;
   text-decoration: none; }
-  .side a {
+  .side-left a {
     text-decoration: none; }
 
-.container {
-  margin: 0 auto;
-  width: 900px;
-  height: 4000px; }
+.container-right {
+  overflow: hidden;
+  width: 70%;
+  height: 4000px;
+  float: right; }
+  .container-right p {
+    width: 100%; }

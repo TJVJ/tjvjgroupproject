@@ -1,7 +1,13 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 
-.side {
+.everything {
+  margin: 0 auto;
+  overflow: auto;
+}
+.side-left {
+  overflow: hidden;
+  width: 30%;
   position: fixed;
   left: 10px;
   top: 0px;
@@ -13,8 +19,12 @@
     }
 }
 
-.container {
-  margin:  0 auto;
-  width: 900px;
+.container-right {
+  overflow: hidden;
+  width: 70%;
   height: 4000px;
+  float: right;
+  p {
+    width: 100%;
+  }
 }
