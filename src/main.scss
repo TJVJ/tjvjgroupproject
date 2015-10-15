@@ -1,30 +1,67 @@
-@import 'bourbon/bourbon';
-@import 'neat/neat';
+// bower:scss
+@import "../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "../bower_components/neat/app/assets/stylesheets/_neat.scss";
+// endbower
 
-.everything {
-  margin: 0 auto;
-  overflow: auto;
-}
-.side-left {
+$mobile: new-breakpoint(max-width 768px 4);
+
+nav {
   overflow: hidden;
-  width: 30%;
+  width: 150px;
   position: fixed;
-  left: 10px;
-  top: 0px;
-  list-style: none;
-  padding-left: 0px;
-  text-decoration: none;
+  left: 0;
+  top: 0;
+  ul {
+    list-style: none;
+    padding-left: 0;
     a {
       text-decoration: none;
     }
+  }
 }
 
-.container-right {
+main {
   overflow: hidden;
-  width: 70%;
-  height: 4000px;
-  float: right;
+  margin: 0 auto;
+  margin-left: 150px;
+  margin-right: 150px;
+  .logo {
+    width: 150px;
+    padding-bottom: 0;
+  }
+  img {
+    padding-bottom: 20px;
+  }
   p {
     width: 100%;
+  }
+  .featured-boxes {
+    .box {
+      text-align: center;
+      border: 1px solid black;
+      background: #EAEAEA;
+      height: 232px;
+      @include span-columns(4);
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+      .border-box {
+        border-top: 1px solid black;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 94%;
+        margin: 0 auto;
+        display: inline-block;
+      }
+      h1 {
+        font-size: 1em;
+        padding-right: 180px;
+      }
+
+
+      //iframe {
+      //  width: 100% !important;
+      //}
+    }
   }
 }
