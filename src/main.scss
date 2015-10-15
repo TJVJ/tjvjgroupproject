@@ -2,6 +2,9 @@
 @import "../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "../bower_components/neat/app/assets/stylesheets/_neat.scss";
 // endbower
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+
 
 $mobile: new-breakpoint(max-width 768px 4);
 
@@ -20,6 +23,23 @@ nav {
   }
 }
 
+.icons {
+  list-style: none;
+  font-size: 24pt;
+  display: inline-block;
+}
+.fontawesome-twitter {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+.fontawesome-facebook {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+.fontawesome-camera {
+  font-family: 'FontAwesome', sans-serif;
+}
+
 main {
   overflow: hidden;
   margin: 0 auto;
@@ -33,7 +53,8 @@ main {
     padding-bottom: 20px;
   }
   p {
-    width: 100%;
+    width: 30%;
+    font-size: 12px;
   }
   .featured-boxes {
     .box {
@@ -58,10 +79,13 @@ main {
         padding-right: 180px;
       }
 
-
       //iframe {
       //  width: 100% !important;
       //}
     }
   }
+}
+
+.news {
+  overflow: hidden;
 }
