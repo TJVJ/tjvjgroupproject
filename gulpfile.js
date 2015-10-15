@@ -7,13 +7,14 @@ var babel   = require('gulp-babel');
 var bower   = require('main-bower-files');
 var concat  = require('gulp-concat');
 var server  = require('gulp-server-livereload');
+var wiredep = require('wiredep').stream;
 
 // Simple Notify Function
 var notifyError = function() {
   return plumber({
     errorHandler: notify.onError("Error: <%= error.message %>")
   });
-}
+};
 
 // Gulp Watch Command
 gulp.task('watch', ['watchfiles', 'webserver']);
@@ -27,7 +28,7 @@ gulp.task('webserver', function () {
 });
 
 // Watch Task to watch certain files
-gulp.task('watchfiles', function() {
+gulp.task('watchfiles', ['sass', 'babel', 'bower'], function() {
 
   gulp.watch('./src/*.scss', ['sass']);
   gulp.watch('./src/*.js', ['babel']);
@@ -35,10 +36,16 @@ gulp.task('watchfiles', function() {
 
 });
 
-// SASS Task to compile sass using `node-sass`
-gulp.task('sass', function(){
+gulp.task('bower:scss', function () {
+  return gulp.src('./src/main.scss')
+    .pipe(wiredep())
+    .pipe(gulp.dest('./src'));
+});
 
-  gulp.src('./src/*.scss')
+// SASS Task to compile sass using `node-sass`
+gulp.task('sass', ['bower:scss'], function(){
+
+  return gulp.src('./src/*.scss')
     .pipe( notifyError() )
     .pipe( sass() )
     .pipe( gulp.dest('./app/css') );
@@ -47,7 +54,7 @@ gulp.task('sass', function(){
 
 // Babel task to transpile ES2015/ES6 code to ES5
 gulp.task('babel', function() {
-  gulp.src('./src/*.js')
+  return gulp.src('./src/*.js')
     .pipe( notifyError() )
     .pipe( babel() )
     .pipe( gulp.dest('./app/js') );
@@ -59,7 +66,7 @@ gulp.task('bower', ['bower:js', 'bower:css']);
 gulp.task('bower:js', function() {
   var files = bower({filter: '**/*.js'});
 
-  gulp.src(files)
+  return gulp.src(files)
     .pipe( notifyError() )
     .pipe( concat('vendor.js') )
     .pipe(gulp.dest('./app/js'));
@@ -68,7 +75,7 @@ gulp.task('bower:js', function() {
 gulp.task('bower:css', function() {
   var files = bower({filter: ['**/*.css', '**/*.scss'] });
 
-  gulp.src(files)
+  return gulp.src(files)
     .pipe( notifyError() )
     .pipe( sass() )
     .pipe( concat('vendor.css') )
