@@ -20,10 +20,10 @@ html {
 .fontawesome-camera {
   font-family: 'FontAwesome', sans-serif; }
 
-.container {
-  margin: 0 auto;
-  width: 900px;
-  height: 4000px; }
-
-.characters {
-  font-family: zocial; }
+.container-right {
+  overflow: hidden;
+  width: 70%;
+  height: 4000px;
+  float: right; }
+  .container-right p {
+    width: 100%; }

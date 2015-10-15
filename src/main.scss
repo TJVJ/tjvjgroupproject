@@ -2,6 +2,7 @@
 @import 'neat/neat';
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
+
 .icons {
   list-style: none;
   font-size: 24pt;
@@ -18,8 +19,12 @@
   font-family: 'FontAwesome', sans-serif;
 }
 
-.container {
-  margin:  0 auto;
-  width: 900px;
+.container-right {
+  overflow: hidden;
+  width: 70%;
   height: 4000px;
+  float: right;
+  p {
+    width: 100%;
+  }
 }
