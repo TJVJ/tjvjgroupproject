@@ -53,17 +53,8 @@ main {
     width: 75px;
     padding-bottom: 0; }
   main img {
-<<<<<<< HEAD
-<<<<<<< HEAD
     padding-bottom: 20px;
     padding-top: 10px; }
-  main p {
-    width: 30%;
-    font-size: 12px; }
-=======
-=======
->>>>>>> origin/dev
-    padding-bottom: 20px; }
   main p.title {
     display: inline-block;
     float: left;
@@ -86,10 +77,6 @@ main {
     width: 100%;
     overflow: scroll;
     height: 124px; }
-<<<<<<< HEAD
->>>>>>> origin/dev
-=======
->>>>>>> origin/dev
   main .featured-boxes .box {
     text-align: center;
     border: 1px solid black;
