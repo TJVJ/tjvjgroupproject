@@ -8,7 +8,7 @@ html {
 
 .everything {
   margin: 0 auto;
-  overflow: auto; }
+  overflow: hidden; }
 
 .side-left {
   overflow: hidden;
@@ -25,7 +25,6 @@ html {
 .container-right {
   overflow: hidden;
   width: 70%;
-  height: 4000px;
-  float: right; }
+  height: 4000px; }
   .container-right p {
     width: 100%; }

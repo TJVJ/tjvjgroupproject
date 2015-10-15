@@ -3,7 +3,7 @@
 
 .everything {
   margin: 0 auto;
-  overflow: auto;
+  overflow: hidden;
 }
 .side-left {
   overflow: hidden;
@@ -23,7 +23,6 @@
   overflow: hidden;
   width: 70%;
   height: 4000px;
-  float: right;
   p {
     width: 100%;
   }
