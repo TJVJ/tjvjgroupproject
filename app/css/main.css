@@ -80,6 +80,9 @@ main {
       font-size: 1em;
       padding-right: 180px; }
 
+.background-img img {
+  width: 100%; }
+
 .news {
   overflow: hidden; }
 
