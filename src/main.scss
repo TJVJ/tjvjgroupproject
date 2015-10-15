@@ -1,16 +1,21 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
-.side {
-  position: fixed;
-  left: 10px;
-  top: 0px;
+.icons {
   list-style: none;
-  padding-left: 0px;
-  text-decoration: none;
-    a {
-      text-decoration: none;
-    }
+  font-size: 24pt;
+}
+.fontawesome-twitter {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+.fontawesome-facebook {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+.fontawesome-camera {
+  font-family: 'FontAwesome', sans-serif;
 }
 
 .container {
