@@ -1,3 +1,4 @@
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
 html {
   box-sizing: border-box; }
 
@@ -6,6 +7,7 @@ html {
 *::before {
   box-sizing: inherit; }
 
+<<<<<<< HEAD
 .everything {
   margin: 0 auto;
   overflow: hidden; }
@@ -16,11 +18,20 @@ html {
   position: fixed;
   left: 10px;
   top: 0px;
+=======
+.icons {
+>>>>>>> c7328b57f959df6405b91ae5302b3655370f4afa
   list-style: none;
-  padding-left: 0px;
-  text-decoration: none; }
-  .side-left a {
-    text-decoration: none; }
+  font-size: 24pt; }
+
+.fontawesome-twitter {
+  font-family: 'FontAwesome', sans-serif; }
+
+.fontawesome-facebook {
+  font-family: 'FontAwesome', sans-serif; }
+
+.fontawesome-camera {
+  font-family: 'FontAwesome', sans-serif; }
 
 .container-right {
   overflow: hidden;
