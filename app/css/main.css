@@ -7,22 +7,20 @@ html {
 *::before {
   box-sizing: inherit; }
 
-<<<<<<< HEAD
-.everything {
-  margin: 0 auto;
-  overflow: hidden; }
+a {
+  text-decoration: none; }
 
-.side-left {
-  overflow: hidden;
-  width: 30%;
-  position: fixed;
-  left: 10px;
-  top: 0px;
-=======
 .icons {
->>>>>>> c7328b57f959df6405b91ae5302b3655370f4afa
   list-style: none;
-  font-size: 24pt; }
+  font-size: 24pt;
+  margin: 0px;
+  width: 300px;
+  float: right;
+  background-color: #C8DEF1;
+  border: 1px solid gray; }
+  .icons li {
+    width: 31%;
+    display: inline-block; }
 
 .fontawesome-twitter {
   font-family: 'FontAwesome', sans-serif; }
