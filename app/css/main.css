@@ -61,14 +61,18 @@ main {
     font-size: 13px;
     font-style: italic;
     font-weight: bold;
-    width: 60%; }
+    width: 60%;
+    text-align: left;
+    padding-left: 15px; }
   main p.date {
     display: inline-block;
-    float: left;
+    float: right;
     font-size: 13px;
     font-style: italic;
     font-weight: bold;
-    width: 40%; }
+    width: 40%;
+    text-align: right;
+    padding-right: 15px; }
   main p.post {
     text-align: left;
     font-size: 12px;
@@ -113,9 +117,42 @@ main {
 .news {
   overflow: hidden; }
 
+.bottom-page {
+  overflow: hidden;
+  margin: 0 auto;
+  margin-left: 150px;
+  margin-right: 150px;
+  border: 1px solid black; }
+
+.menucontent {
+  width: 65%;
+  display: inline-block;
+  float: left;
+  border: 1px solid red;
+  margin-right: 5%; }
+
+.menutabs {
+  height: 40px;
+  margin-bottom: 5px; }
+  .menutabs p {
+    padding: 5px;
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    overflow: hidden; }
+
 .Reservations {
   background-color: pink;
-  width: 1000px;
+  width: auto;
   margin: 0 auto;
-  border: 1px solid black;
-  display: none; }
+  display: block;
+  height: auto; }
+
+.food-photos {
+  width: 30%;
+  display: inline-block;
+  float: right;
+  border: 1px solid blue; }
