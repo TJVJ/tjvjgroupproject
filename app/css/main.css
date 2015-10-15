@@ -13,10 +13,21 @@ html {
   list-style: none;
   padding-left: 0px;
   text-decoration: none; }
-  .side a {
-    text-decoration: none; }
+
+a {
+  text-decoration: none; }
 
 .container {
   margin: 0 auto;
   width: 900px;
   height: 4000px; }
+
+.Reservations {
+  margin: 0 auto;
+  width: 1000px;
+  border: 2px #898989;
+  background-color: pink; }
+
+.submit {
+  background-color: black;
+  color: white; }
