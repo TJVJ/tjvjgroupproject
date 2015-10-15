@@ -27,7 +27,12 @@ nav {
   display: inline-block;
   font-size: 24pt;
   float: right;
-  padding-top: 50px;
+  border: 1px solid #DFDFDF;
+  background-color: #F7F7F7;
+  height: 43px;
+  width: 120px;
+  margin-top: 30px;
+  padding-left: 7px;
 }
 
 .icons {
@@ -52,15 +57,39 @@ main {
   margin-left: 150px;
   margin-right: 150px;
   .logo {
-    width: 100px;
+    width: 75px;
     padding-bottom: 0;
   }
   img {
     padding-bottom: 20px;
+    padding-top: 10px;
   }
   p {
-    width: 30%;
-    font-size: 12px;
+    &.title {
+      display: inline-block;
+      float: left;
+      font-size: 13px;
+      font-style: italic;
+      font-weight: bold;
+      width: 60%;
+    }
+    &.date {
+      display: inline-block;
+      float: left;
+      font-size: 13px;
+      font-style: italic;
+      font-weight: bold;
+      width: 40%;
+    }
+    &.post {
+      text-align: left;
+      font-size: 12px;
+      padding: 0 5%;
+      margin-bottom: 5%;
+      width: 100%;
+      overflow: scroll;
+      height: 124px;
+    }
   }
   .featured-boxes {
     .box {

@@ -12,7 +12,7 @@
 
   // Templates
   var newst = function newst(obj) {
-    var template = '\n    <p>Latest News</p>\n    <div>\n      <p class=\'title\'>' + obj.title + '</p>\n      <p class=\'date\'>' + obj.date_published + '</p>\n    </div>\n    <p>' + obj.post + '</p>';
+    var template = '\n    <div>\n      <p class=\'title\'>' + obj.title + '</p>\n      <p class=\'date\'>' + obj.date_published + '</p>\n    </div>\n    <p class=\'post\'>' + obj.post + '</p>';
     return template;
   };
 

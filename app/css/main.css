@@ -23,7 +23,12 @@ nav {
   display: inline-block;
   font-size: 24pt;
   float: right;
-  padding-top: 50px; }
+  border: 1px solid #DFDFDF;
+  background-color: #F7F7F7;
+  height: 43px;
+  width: 120px;
+  margin-top: 30px;
+  padding-left: 7px; }
 
 .icons {
   list-style: none;
@@ -45,13 +50,46 @@ main {
   margin-left: 150px;
   margin-right: 150px; }
   main .logo {
-    width: 100px;
+    width: 75px;
     padding-bottom: 0; }
   main img {
-    padding-bottom: 20px; }
+<<<<<<< HEAD
+<<<<<<< HEAD
+    padding-bottom: 20px;
+    padding-top: 10px; }
   main p {
     width: 30%;
     font-size: 12px; }
+=======
+=======
+>>>>>>> origin/dev
+    padding-bottom: 20px; }
+  main p.title {
+    display: inline-block;
+    float: left;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: bold;
+    width: 60%; }
+  main p.date {
+    display: inline-block;
+    float: left;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: bold;
+    width: 40%; }
+  main p.post {
+    text-align: left;
+    font-size: 12px;
+    padding: 0 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    overflow: scroll;
+    height: 124px; }
+<<<<<<< HEAD
+>>>>>>> origin/dev
+=======
+>>>>>>> origin/dev
   main .featured-boxes .box {
     text-align: center;
     border: 1px solid black;
