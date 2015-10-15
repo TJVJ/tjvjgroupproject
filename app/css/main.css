@@ -7,20 +7,22 @@ html {
 *::before {
   box-sizing: inherit; }
 
-a {
-  text-decoration: none; }
+nav {
+  overflow: hidden;
+  width: 150px;
+  position: fixed;
+  left: 0;
+  top: 0; }
+  nav ul {
+    list-style: none;
+    padding-left: 0; }
+    nav ul a {
+      text-decoration: none; }
 
 .icons {
   list-style: none;
   font-size: 24pt;
-  margin: 0px;
-  width: 300px;
-  float: right;
-  background-color: #C8DEF1;
-  border: 1px solid gray; }
-  .icons li {
-    width: 31%;
-    display: inline-block; }
+  display: inline-block; }
 
 .fontawesome-twitter {
   font-family: 'FontAwesome', sans-serif; }
@@ -31,9 +33,48 @@ a {
 .fontawesome-camera {
   font-family: 'FontAwesome', sans-serif; }
 
-.container-right {
+main {
   overflow: hidden;
-  width: 70%;
-  height: 4000px; }
-  .container-right p {
-    width: 100%; }
+  margin: 0 auto;
+  margin-left: 150px;
+  margin-right: 150px; }
+  main .logo {
+    width: 150px;
+    padding-bottom: 0; }
+  main img {
+    padding-bottom: 20px; }
+  main p {
+    width: 30%;
+    font-size: 12px; }
+  main .featured-boxes .box {
+    text-align: center;
+    border: 1px solid black;
+    background: #EAEAEA;
+    height: 232px;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    main .featured-boxes .box:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 768px) {
+      main .featured-boxes .box {
+        float: left;
+        display: block;
+        margin-right: 7.42297%;
+        width: 314.84594%; }
+        main .featured-boxes .box:last-child {
+          margin-right: 0; } }
+    main .featured-boxes .box .border-box {
+      border-top: 1px solid black;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      width: 94%;
+      margin: 0 auto;
+      display: inline-block; }
+    main .featured-boxes .box h1 {
+      font-size: 1em;
+      padding-right: 180px; }
+
+.news {
+  overflow: hidden; }
