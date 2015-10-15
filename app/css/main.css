@@ -49,9 +49,28 @@ main {
     padding-bottom: 0; }
   main img {
     padding-bottom: 20px; }
-  main p {
-    width: 30%;
-    font-size: 12px; }
+  main p.title {
+    display: inline-block;
+    float: left;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: bold;
+    width: 60%; }
+  main p.date {
+    display: inline-block;
+    float: left;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: bold;
+    width: 40%; }
+  main p.post {
+    text-align: left;
+    font-size: 12px;
+    padding: 0 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    overflow: scroll;
+    height: 124px; }
   main .featured-boxes .box {
     text-align: center;
     border: 1px solid black;

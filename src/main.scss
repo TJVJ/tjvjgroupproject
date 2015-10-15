@@ -59,8 +59,31 @@ main {
     padding-bottom: 20px;
   }
   p {
-    width: 30%;
-    font-size: 12px;
+    &.title {
+      display: inline-block;
+      float: left;
+      font-size: 13px;
+      font-style: italic;
+      font-weight: bold;
+      width: 60%;
+    }
+    &.date {
+      display: inline-block;
+      float: left;
+      font-size: 13px;
+      font-style: italic;
+      font-weight: bold;
+      width: 40%;
+    }
+    &.post {
+      text-align: left;
+      font-size: 12px;
+      padding: 0 5%;
+      margin-bottom: 5%;
+      width: 100%;
+      overflow: scroll;
+      height: 124px;
+    }
   }
   .featured-boxes {
     .box {
