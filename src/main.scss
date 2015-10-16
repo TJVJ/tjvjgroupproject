@@ -6,7 +6,11 @@
 
 
 
-$mobile: new-breakpoint(max-width 768px 4);
+$mobile: new-breakpoint(max-width 840px);
+
+body {
+  font-family: 'Lato', sans-serif;
+}
 
 nav {
   overflow: hidden;
@@ -23,6 +27,12 @@ nav {
   }
 }
 
+.blowfish-gif {
+  padding-left: 5px;
+  padding-bottom: 7px;
+  width: 339px;
+}
+
 .social-media {
   display: inline-block;
   font-size: 24pt;
@@ -31,8 +41,15 @@ nav {
   background-color: #F7F7F7;
   height: 43px;
   width: 120px;
-  margin-top: 30px;
+  margin-top: 25px;
+  margin-right: 10px;
+  padding-top: 3px;
   padding-left: 7px;
+}
+
+.logo-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
 }
 
 .icons {
@@ -41,28 +58,32 @@ nav {
   display: inline-block;
   }
 
-  .fontawesome-twitter {
+.fontawesome-twitter {
   font-family: 'FontAwesome', sans-serif;
-  }
-  .fontawesome-facebook {
+}
+.fontawesome-facebook {
   font-family: 'FontAwesome', sans-serif;
-  }
-  .fontawesome-camera {
+}
+.fontawesome-camera {
   font-family: 'FontAwesome', sans-serif;
+}
+
+.border-top {
+    border-top: 1px solid #BBB;
+    margin-top: 15px;
+    width: 100%;
+    margin-bottom: 12px;
   }
 
 main {
-  overflow: hidden;
-  margin: 0 auto;
-  margin-left: 150px;
-  margin-right: 150px;
+  @include outer-container;
   .logo {
     width: 75px;
     padding-bottom: 0;
   }
   img {
-    padding-bottom: 20px;
     padding-top: 10px;
+    padding-bottom: 10px;
   }
   p {
     &.title {
@@ -71,7 +92,7 @@ main {
       font-size: 13px;
       font-style: italic;
       font-weight: bold;
-      width: 60%;
+      width: 68%;
     }
     &.date {
       display: inline-block;
@@ -80,6 +101,7 @@ main {
       font-style: italic;
       font-weight: bold;
       width: 40%;
+      width: 60px;
     }
     &.post {
       text-align: left;
@@ -97,21 +119,45 @@ main {
       border: 1px solid black;
       background: #EAEAEA;
       height: 232px;
+      padding: 15px;
       @include span-columns(4);
       @include media($mobile) {
         @include span-columns(12);
       }
       .border-box {
         border-top: 1px solid black;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        width: 94%;
-        margin: 0 auto;
-        display: inline-block;
       }
+
       h1 {
         font-size: 1em;
-        padding-right: 180px;
+        text-align: left;
+        padding-bottom: 10px;
+        @include media($mobile) {
+          text-align: center;
+        }
+      }
+      iframe {
+        padding-top: 8px;
+        padding-bottom: 10px;
+        max-width: 100%;
+      }
+      .address {
+        font-size: 12px;
+        display: block;
+      }
+      .number-map {
+        padding-bottom: 2px;
+      }
+      .number {
+        font-size: 12px;
+      }
+      .map {
+        padding-left: 5px;
+        font-size: 12px;
+      }
+      .directions {
+        padding-left: 5px;
+        font-size: 12px;
       }
 
       //iframe {
@@ -119,19 +165,13 @@ main {
       //}
     }
   }
+  .Reservations {
+    @include span-columns(12);
+    background-color: pink;
+    border: 1px solid black;
+    display: none;
+  }
 }
 .background-img img{
   width: 100%;
-
-}
-.news {
-  overflow: hidden;
-}
-
-.Reservations {
-  background-color: pink;
-  width: 1000px;
-  margin: 0 auto;
-  border: 1px solid black;
-  display: none;
 }

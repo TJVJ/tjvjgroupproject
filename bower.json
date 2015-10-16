@@ -20,6 +20,8 @@
     "underscore": "~1.8.3",
     "moment": "~2.10.6",
     "bourbon": "~4.2.5",
-    "neat": "~1.7.2"
+    "neat": "~1.7.2",
+    "animate.css": "~3.4.0",
+    "flickr-api": "*"
   }
 }
