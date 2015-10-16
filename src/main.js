@@ -34,7 +34,7 @@
   let promise2 = $.getJSON(url2);
 
   promises.then( function (obj) {
-    
+
     var theSpecialId = obj.menu_item_id;
 
     promise2.then( function (obj) {
@@ -48,10 +48,9 @@
       _.filter(entrees, function(entree) {
         if (entree.id === theSpecialId) {
           let template = `
-            <p>Todays Special</p>
-            <p>${ entree.item }</p>
-            <p>${ entree.description }</p>
-            <p>${ entree.price }</p>`;
+            <p class='eitems'>${ entree.item }</p>
+            <p class='eprice'>${ entree.price }</p>
+            <p class='edesc'>${ entree.description }</p>`;
           doSomethings(template);
         };
       });
@@ -64,7 +63,6 @@
       _.filter(sides, function(item) {
         if (item.id === theSpecialId) {
           let template = `
-            <p>Todays Special</p>
             <p>${ obj.item }</p>
             <p>${ obj.description }</p>
             <p>${ obj.price }</p>`;
@@ -74,17 +72,16 @@
       _.filter(appetizers, function(item) {
         if (item.id === theSpecialId) {
           let template = `
-            <p>Todays Special</p>
             <p>${ obj.item }</p>
             <p>${ obj.description }</p>
             <p>${ obj.price }</p>`;
           doSomethings(template);
         };
       });
-      
+
     });
   });
-    
+
 
   let doSomethings = function(template) {
     console.log(template);
@@ -92,4 +89,3 @@
   };
 
 }());
-

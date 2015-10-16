@@ -114,6 +114,27 @@ main {
 .background-img img {
   width: 100%; }
 
+.thephoto {
+  display: inline-block;
+  width: 100%;
+  height: 100px;
+  background-image: url("http://www.finecooking.com/CMS/uploadedimages/Images/Cooking/Articles/Cookbook/Goin-atlantic-sea-scallops_xlg.jpg");
+  background-position: center;
+  margin-top: 3%; }
+
+.special p {
+  display: inline-block;
+  font-size: 12px; }
+  .special p.eitems {
+    float: left;
+    font-weight: bold;
+    margin-bottom: 0; }
+  .special p.eprice {
+    float: right; }
+  .special p.edesc {
+    margin-top: 0;
+    text-align: left; }
+
 .news {
   overflow: hidden; }
 

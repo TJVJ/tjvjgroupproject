@@ -40,20 +40,20 @@
 
       _.filter(entrees, function (entree) {
         if (entree.id === theSpecialId) {
-          var template = '\n            <p>Todays Special</p>\n            <p>' + entree.item + '</p>\n            <p>' + entree.description + '</p>\n            <p>' + entree.price + '</p>';
+          var template = '\n            <p class=\'eitems\'>' + entree.item + '</p>\n            <p class=\'eprice\'>' + entree.price + '</p>\n            <p class=\'edesc\'>' + entree.description + '</p>';
           doSomethings(template);
         };
       });
 
       _.filter(sides, function (item) {
         if (item.id === theSpecialId) {
-          var template = '\n            <p>Todays Special</p>\n            <p>' + obj.item + '</p>\n            <p>' + obj.description + '</p>\n            <p>' + obj.price + '</p>';
+          var template = '\n            <p>' + obj.item + '</p>\n            <p>' + obj.description + '</p>\n            <p>' + obj.price + '</p>';
           doSomethings(template);
         };
       });
       _.filter(appetizers, function (item) {
         if (item.id === theSpecialId) {
-          var template = '\n            <p>Todays Special</p>\n            <p>' + obj.item + '</p>\n            <p>' + obj.description + '</p>\n            <p>' + obj.price + '</p>';
+          var template = '\n            <p>' + obj.item + '</p>\n            <p>' + obj.description + '</p>\n            <p>' + obj.price + '</p>';
           doSomethings(template);
         };
       });
