@@ -3,7 +3,7 @@
 @import "../bower_components/neat/app/assets/stylesheets/_neat.scss";
 // endbower
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
-
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
 
 
 $mobile: new-breakpoint(max-width 768px 4);
@@ -21,6 +21,17 @@ nav {
       text-decoration: none;
     }
   }
+}
+span.title {
+  font-size: 48pt;
+  font-family: 'Poiret One', cursive;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+  color: #faf687;
+
 }
 
 .social-media {

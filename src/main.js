@@ -56,11 +56,6 @@
         };
       });
 
-
-
-
-
-
       _.filter(sides, function(item) {
         if (item.id === theSpecialId) {
           let template = `
