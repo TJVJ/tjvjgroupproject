@@ -1,30 +1,181 @@
-@import 'bourbon/bourbon';
-@import 'neat/neat';
+// bower:scss
+@import "../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "../bower_components/neat/app/assets/stylesheets/_neat.scss";
+// endbower
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
+
+
+$mobile: new-breakpoint(max-width 768px 4);
+
+nav {
+  overflow: hidden;
+  width: 150px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  ul {
+    list-style: none;
+    padding-left: 0;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.social-media {
+  display: inline-block;
+  font-size: 24pt;
+  float: right;
+  border: 1px solid #DFDFDF;
+  background-color: #F7F7F7;
+  height: 43px;
+  width: 120px;
+  margin-top: 30px;
+  padding-left: 7px;
+}
 
 .icons {
   list-style: none;
   font-size: 24pt;
-}
-.fontawesome-twitter {
-  font-family: 'FontAwesome', sans-serif;
-}
-
-.fontawesome-facebook {
-  font-family: 'FontAwesome', sans-serif;
-}
-
-.fontawesome-camera {
-  font-family: 'FontAwesome', sans-serif;
-}
-
-.container-right {
-  overflow: hidden;
-  width: 70%;
-  height: 4000px;
-  float: right;
-  p {
-    width: 100%;
+  display: inline-block;
   }
+
+  .fontawesome-twitter {
+  font-family: 'FontAwesome', sans-serif;
+  }
+  .fontawesome-facebook {
+  font-family: 'FontAwesome', sans-serif;
+  }
+  .fontawesome-camera {
+  font-family: 'FontAwesome', sans-serif;
+  }
+
+main {
+  overflow: hidden;
+  margin: 0 auto;
+  margin-left: 150px;
+  margin-right: 150px;
+  .logo {
+    width: 75px;
+    padding-bottom: 0;
+  }
+  img {
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+  p {
+    &.title {
+      display: inline-block;
+      float: left;
+      font-size: 13px;
+      font-style: italic;
+      font-weight: bold;
+      width: 60%;
+      text-align: left;
+      padding-left: 15px;
+    }
+    &.date {
+      display: inline-block;
+      float: right;
+      font-size: 13px;
+      font-style: italic;
+      font-weight: bold;
+      width: 40%;
+      text-align: right;
+      padding-right: 15px;
+    }
+    &.post {
+      text-align: left;
+      font-size: 12px;
+      padding: 0 5%;
+      margin-bottom: 5%;
+      width: 100%;
+      overflow: scroll;
+      height: 124px;
+    }
+  }
+  .featured-boxes {
+    .box {
+      text-align: center;
+      border: 1px solid black;
+      background: #EAEAEA;
+      height: 232px;
+      @include span-columns(4);
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+      .border-box {
+        border-top: 1px solid black;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 94%;
+        margin: 0 auto;
+        display: inline-block;
+      }
+      h1 {
+        font-size: 1em;
+        padding-right: 180px;
+      }
+
+      //iframe {
+      //  width: 100% !important;
+      //}
+    }
+  }
+}
+.background-img img{
+  width: 100%;
+
+}
+.news {
+  overflow: hidden;
+}
+
+// Top Menu Buttons for different displays
+
+.bottom-page {
+  overflow: hidden;
+  margin: 0 auto;
+  margin-left: 150px;
+  margin-right: 150px;
+  border: 1px solid black;
+}
+
+.menucontent {
+  width: 65%;
+  display: inline-block;
+  float: left;
+  border: 1px solid red;
+  margin-right: 5%;
+}
+
+.menutabs {
+  height: 40px;
+  margin-bottom: 5px;
+  & p {
+    padding: 5px;
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    overflow: hidden;
+  }
+}
+
+.Reservations {
+  background-color: pink;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+  height: auto;
+}
+
+.food-photos {
+  width: 30%;
+  display: inline-block;
+  float: right;
+  border: 1px solid blue;
 }

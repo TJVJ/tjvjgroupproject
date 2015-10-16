@@ -7,9 +7,33 @@ html {
 *::before {
   box-sizing: inherit; }
 
+nav {
+  overflow: hidden;
+  width: 150px;
+  position: fixed;
+  left: 0;
+  top: 0; }
+  nav ul {
+    list-style: none;
+    padding-left: 0; }
+    nav ul a {
+      text-decoration: none; }
+
+.social-media {
+  display: inline-block;
+  font-size: 24pt;
+  float: right;
+  border: 1px solid #DFDFDF;
+  background-color: #F7F7F7;
+  height: 43px;
+  width: 120px;
+  margin-top: 30px;
+  padding-left: 7px; }
+
 .icons {
   list-style: none;
-  font-size: 24pt; }
+  font-size: 24pt;
+  display: inline-block; }
 
 .fontawesome-twitter {
   font-family: 'FontAwesome', sans-serif; }
@@ -20,10 +44,115 @@ html {
 .fontawesome-camera {
   font-family: 'FontAwesome', sans-serif; }
 
-.container-right {
+main {
   overflow: hidden;
-  width: 70%;
-  height: 4000px;
-  float: right; }
-  .container-right p {
-    width: 100%; }
+  margin: 0 auto;
+  margin-left: 150px;
+  margin-right: 150px; }
+  main .logo {
+    width: 75px;
+    padding-bottom: 0; }
+  main img {
+    padding-bottom: 20px;
+    padding-top: 10px; }
+  main p.title {
+    display: inline-block;
+    float: left;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: bold;
+    width: 60%;
+    text-align: left;
+    padding-left: 15px; }
+  main p.date {
+    display: inline-block;
+    float: right;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: bold;
+    width: 40%;
+    text-align: right;
+    padding-right: 15px; }
+  main p.post {
+    text-align: left;
+    font-size: 12px;
+    padding: 0 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    overflow: scroll;
+    height: 124px; }
+  main .featured-boxes .box {
+    text-align: center;
+    border: 1px solid black;
+    background: #EAEAEA;
+    height: 232px;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    main .featured-boxes .box:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 768px) {
+      main .featured-boxes .box {
+        float: left;
+        display: block;
+        margin-right: 7.42297%;
+        width: 314.84594%; }
+        main .featured-boxes .box:last-child {
+          margin-right: 0; } }
+    main .featured-boxes .box .border-box {
+      border-top: 1px solid black;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      width: 94%;
+      margin: 0 auto;
+      display: inline-block; }
+    main .featured-boxes .box h1 {
+      font-size: 1em;
+      padding-right: 180px; }
+
+.background-img img {
+  width: 100%; }
+
+.news {
+  overflow: hidden; }
+
+.bottom-page {
+  overflow: hidden;
+  margin: 0 auto;
+  margin-left: 150px;
+  margin-right: 150px;
+  border: 1px solid black; }
+
+.menucontent {
+  width: 65%;
+  display: inline-block;
+  float: left;
+  border: 1px solid red;
+  margin-right: 5%; }
+
+.menutabs {
+  height: 40px;
+  margin-bottom: 5px; }
+  .menutabs p {
+    padding: 5px;
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    overflow: hidden; }
+
+.Reservations {
+  background-color: pink;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+  height: auto; }
+
+.food-photos {
+  width: 30%;
+  display: inline-block;
+  float: right;
+  border: 1px solid blue; }

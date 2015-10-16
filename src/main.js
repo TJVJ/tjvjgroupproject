@@ -11,18 +11,18 @@
   // Templates
   let newst = function (obj) {
     let template = `
-    <p>Latest News</p>
     <div>
       <p class='title'>${ obj.title }</p>
       <p class='date'>${ obj.date_published }</p>
     </div>
-    <p>${ obj.post }</p>`;
+    <p class='post'>${ obj.post }</p>`;
     return template;
   };
 
   let doSomething = function(newsItem) {
     $('.news').append(newst(newsItem));
   };
+
 
   //Section 2 specials
 
@@ -92,3 +92,4 @@
   };
 
 }());
+
