@@ -7,6 +7,9 @@ html {
 *::before {
   box-sizing: inherit; }
 
+body {
+  font-family: 'Lato', sans-serif; }
+
 nav {
   overflow: hidden;
   width: 150px;
@@ -19,6 +22,11 @@ nav {
     nav ul a {
       text-decoration: none; }
 
+.blowfish-gif {
+  padding-left: 5px;
+  padding-bottom: 7px;
+  width: 339px; }
+
 .social-media {
   display: inline-block;
   font-size: 24pt;
@@ -27,8 +35,14 @@ nav {
   background-color: #F7F7F7;
   height: 43px;
   width: 120px;
-  margin-top: 30px;
+  margin-top: 25px;
+  margin-right: 10px;
+  padding-top: 3px;
   padding-left: 7px; }
+
+.logo-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px; }
 
 .icons {
   list-style: none;
@@ -44,26 +58,39 @@ nav {
 .fontawesome-camera {
   font-family: 'FontAwesome', sans-serif; }
 
+.border-top {
+  border-top: 1px solid #BBB;
+  margin-top: 15px;
+  width: 100%;
+  margin-bottom: 12px; }
+
 main {
-  overflow: hidden;
-  margin: 0 auto;
-  margin-left: 150px;
-  margin-right: 150px; }
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  main::after {
+    clear: both;
+    content: "";
+    display: table; }
   main .logo {
     width: 75px;
     padding-bottom: 0; }
   main img {
-    padding-bottom: 20px;
-    padding-top: 10px; }
+    padding-top: 10px;
+    padding-bottom: 10px; }
   main p.title {
     display: inline-block;
     float: left;
     font-size: 13px;
     font-style: italic;
     font-weight: bold;
+<<<<<<< HEAD
     width: 60%;
     text-align: left;
     padding-left: 15px; }
+=======
+    width: 68%; }
+>>>>>>> fdfe16a771125e7c8ce2c7ff07a4d3fb4cd28cc9
   main p.date {
     display: inline-block;
     float: right;
@@ -71,8 +98,12 @@ main {
     font-style: italic;
     font-weight: bold;
     width: 40%;
+<<<<<<< HEAD
     text-align: right;
     padding-right: 15px; }
+=======
+    width: 60px; }
+>>>>>>> fdfe16a771125e7c8ce2c7ff07a4d3fb4cd28cc9
   main p.post {
     text-align: left;
     font-size: 12px;
@@ -86,33 +117,61 @@ main {
     border: 1px solid black;
     background: #EAEAEA;
     height: 232px;
+    padding: 15px;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%; }
     main .featured-boxes .box:last-child {
       margin-right: 0; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 840px) {
       main .featured-boxes .box {
         float: left;
         display: block;
-        margin-right: 7.42297%;
-        width: 314.84594%; }
+        margin-right: 2.35765%;
+        width: 100%; }
         main .featured-boxes .box:last-child {
           margin-right: 0; } }
     main .featured-boxes .box .border-box {
-      border-top: 1px solid black;
-      margin-top: 15px;
-      margin-bottom: 15px;
-      width: 94%;
-      margin: 0 auto;
-      display: inline-block; }
+      border-top: 1px solid black; }
     main .featured-boxes .box h1 {
       font-size: 1em;
-      padding-right: 180px; }
+      text-align: left;
+      padding-bottom: 10px; }
+      @media screen and (max-width: 840px) {
+        main .featured-boxes .box h1 {
+          text-align: center; } }
+    main .featured-boxes .box iframe {
+      padding-top: 8px;
+      padding-bottom: 10px;
+      max-width: 100%; }
+    main .featured-boxes .box .address {
+      font-size: 12px;
+      display: block; }
+    main .featured-boxes .box .number-map {
+      padding-bottom: 2px; }
+    main .featured-boxes .box .number {
+      font-size: 12px; }
+    main .featured-boxes .box .map {
+      padding-left: 5px;
+      font-size: 12px; }
+    main .featured-boxes .box .directions {
+      padding-left: 5px;
+      font-size: 12px; }
+  main .Reservations {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    background-color: pink;
+    border: 1px solid black;
+    display: none; }
+    main .Reservations:last-child {
+      margin-right: 0; }
 
 .background-img img {
   width: 100%; }
+<<<<<<< HEAD
 
 .thephoto {
   display: inline-block;
@@ -177,3 +236,5 @@ main {
   display: inline-block;
   float: right;
   border: 1px solid blue; }
+=======
+>>>>>>> fdfe16a771125e7c8ce2c7ff07a4d3fb4cd28cc9
