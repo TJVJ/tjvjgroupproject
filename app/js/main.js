@@ -53,7 +53,11 @@
       });
       _.filter(appetizers, function (item) {
         if (item.id === theSpecialId) {
+<<<<<<< HEAD
           var template = '\n            <p>' + obj.item + '</p>\n            <p>' + obj.description + '</p>\n            <p>' + obj.price + '</p>';
+=======
+          var template = '\n            <p>' + obj.item + '</p>\n            <p>' + obj.description + '</p>\n            <p>' + (obj.price + '........') + '</p>';
+>>>>>>> 02c2d200f48c022e1d027f4b9698d576297807b0
           doSomethings(template);
         };
       });

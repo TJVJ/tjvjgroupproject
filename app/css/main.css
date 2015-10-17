@@ -10,22 +10,13 @@ html {
 body {
   font-family: 'Lato', sans-serif; }
 
-nav {
-  overflow: hidden;
-  width: 150px;
-  position: fixed;
-  left: 0;
-  top: 0; }
-  nav ul {
-    list-style: none;
-    padding-left: 0; }
-    nav ul a {
-      text-decoration: none; }
-
 .blowfish-gif {
   padding-left: 5px;
   padding-bottom: 7px;
   width: 339px; }
+  @media screen and (max-width: 840px) {
+    .blowfish-gif {
+      width: 200px; } }
 
 .social-media {
   display: inline-block;
@@ -35,10 +26,16 @@ nav {
   background-color: #F7F7F7;
   height: 43px;
   width: 120px;
-  margin-top: 25px;
+  margin-top: 26px;
   margin-right: 10px;
   padding-top: 3px;
   padding-left: 7px; }
+  @media screen and (max-width: 840px) {
+    .social-media {
+      width: 90px;
+      height: 50px;
+      overflow: hidden;
+      margin-top: 18px; } }
 
 .logo-text {
   font-family: 'Lato', sans-serif;
@@ -51,12 +48,24 @@ nav {
 
 .fontawesome-twitter {
   font-family: 'FontAwesome', sans-serif; }
+  @media screen and (max-width: 840px) {
+    .fontawesome-twitter {
+      font-size: 20px;
+      margin-bottom: 3px; } }
 
 .fontawesome-facebook {
   font-family: 'FontAwesome', sans-serif; }
+  @media screen and (max-width: 840px) {
+    .fontawesome-facebook {
+      font-size: 20px;
+      margin-bottom: 3px; } }
 
 .fontawesome-camera {
   font-family: 'FontAwesome', sans-serif; }
+  @media screen and (max-width: 840px) {
+    .fontawesome-camera {
+      font-size: 20px;
+      margin-bottom: 3px; } }
 
 .border-top {
   border-top: 1px solid #BBB;
@@ -75,6 +84,9 @@ main {
   main .logo {
     width: 75px;
     padding-bottom: 0; }
+    @media screen and (max-width: 840px) {
+      main .logo {
+        width: 60px; } }
   main img {
     padding-top: 10px;
     padding-bottom: 10px; }
@@ -118,6 +130,7 @@ main {
     background: #EAEAEA;
     height: 232px;
     padding: 15px;
+    padding-top: 0;
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -145,6 +158,9 @@ main {
       padding-top: 8px;
       padding-bottom: 10px;
       max-width: 100%; }
+      @media screen and (max-width: 840px) {
+        main .featured-boxes .box iframe {
+          width: 500px; } }
     main .featured-boxes .box .address {
       font-size: 12px;
       display: block; }
@@ -165,13 +181,16 @@ main {
     width: 100%;
     background-color: pink;
     border: 1px solid black;
-    display: none; }
+    display: block; }
     main .Reservations:last-child {
       margin-right: 0; }
 
 .background-img img {
   width: 100%; }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 02c2d200f48c022e1d027f4b9698d576297807b0
 
 .thephoto {
   display: inline-block;
@@ -189,7 +208,12 @@ main {
     font-weight: bold;
     margin-bottom: 0; }
   .special p.eprice {
+<<<<<<< HEAD
     float: right; }
+=======
+    float: right;
+    margin-bottom: 0; }
+>>>>>>> 02c2d200f48c022e1d027f4b9698d576297807b0
   .special p.edesc {
     margin-top: 0;
     text-align: left; }
@@ -202,7 +226,12 @@ main {
   margin: 0 auto;
   margin-left: 150px;
   margin-right: 150px;
+<<<<<<< HEAD
   border: 1px solid black; }
+=======
+  border: 1px solid black;
+  margin-top: 20px; }
+>>>>>>> 02c2d200f48c022e1d027f4b9698d576297807b0
 
 .menucontent {
   width: 65%;
@@ -224,6 +253,7 @@ main {
     border-top: 1px solid black;
     overflow: hidden; }
 
+<<<<<<< HEAD
 .Reservations {
   background-color: pink;
   width: auto;
@@ -231,10 +261,15 @@ main {
   display: block;
   height: auto; }
 
+=======
+>>>>>>> 02c2d200f48c022e1d027f4b9698d576297807b0
 .food-photos {
   width: 30%;
   display: inline-block;
   float: right;
   border: 1px solid blue; }
+<<<<<<< HEAD
 =======
 >>>>>>> fdfe16a771125e7c8ce2c7ff07a4d3fb4cd28cc9
+=======
+>>>>>>> 02c2d200f48c022e1d027f4b9698d576297807b0
