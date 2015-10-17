@@ -53,11 +53,7 @@
       });
       _.filter(appetizers, function (item) {
         if (item.id === theSpecialId) {
-<<<<<<< HEAD
-          var template = '\n            <p>' + obj.item + '</p>\n            <p>' + obj.description + '</p>\n            <p>' + obj.price + '</p>';
-=======
           var template = '\n            <p>' + obj.item + '</p>\n            <p>' + obj.description + '</p>\n            <p>' + (obj.price + '........') + '</p>';
->>>>>>> 02c2d200f48c022e1d027f4b9698d576297807b0
           doSomethings(template);
         };
       });
@@ -68,4 +64,37 @@
     console.log(template);
     $('.special').append(template);
   };
+
+  $('ul.tabs').each(function () {
+
+    var $active,
+        $content,
+        $links = $(this).find('a');
+
+    $active = $($links.filter('[href="' + location.hash + '"]')[0] || $links[0]);
+    $active.addClass('active');
+
+    $content = $($active[0].hash);
+
+    // Hide the remaining content
+    $links.not($active).each(function () {
+      $(this.hash).hide();
+    });
+
+    $(this).on('click', 'a', function (e) {
+      // Make the old tab inactive.
+      $active.removeClass('active');
+      $content.hide();
+
+      // Update the variables
+      $active = $(this);
+      $content = $(this.hash);
+
+      // Make the tab active.
+      $active.addClass('active');
+      $content.show();
+
+      e.preventDefault();
+    });
+  });
 })();

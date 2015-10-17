@@ -96,26 +96,15 @@ main {
     font-size: 13px;
     font-style: italic;
     font-weight: bold;
-<<<<<<< HEAD
-    width: 60%;
-    text-align: left;
-    padding-left: 15px; }
-=======
     width: 68%; }
->>>>>>> fdfe16a771125e7c8ce2c7ff07a4d3fb4cd28cc9
   main p.date {
     display: inline-block;
-    float: right;
+    float: left;
     font-size: 13px;
     font-style: italic;
     font-weight: bold;
     width: 40%;
-<<<<<<< HEAD
-    text-align: right;
-    padding-right: 15px; }
-=======
     width: 60px; }
->>>>>>> fdfe16a771125e7c8ce2c7ff07a4d3fb4cd28cc9
   main p.post {
     text-align: left;
     font-size: 12px;
@@ -187,10 +176,6 @@ main {
 
 .background-img img {
   width: 100%; }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 02c2d200f48c022e1d027f4b9698d576297807b0
 
 .thephoto {
   display: inline-block;
@@ -208,12 +193,8 @@ main {
     font-weight: bold;
     margin-bottom: 0; }
   .special p.eprice {
-<<<<<<< HEAD
-    float: right; }
-=======
     float: right;
     margin-bottom: 0; }
->>>>>>> 02c2d200f48c022e1d027f4b9698d576297807b0
   .special p.edesc {
     margin-top: 0;
     text-align: left; }
@@ -226,12 +207,8 @@ main {
   margin: 0 auto;
   margin-left: 150px;
   margin-right: 150px;
-<<<<<<< HEAD
-  border: 1px solid black; }
-=======
   border: 1px solid black;
   margin-top: 20px; }
->>>>>>> 02c2d200f48c022e1d027f4b9698d576297807b0
 
 .menucontent {
   width: 65%;
@@ -240,36 +217,19 @@ main {
   border: 1px solid red;
   margin-right: 5%; }
 
-.menutabs {
-  height: 40px;
-  margin-bottom: 5px; }
-  .menutabs p {
-    padding: 5px;
-    display: inline-block;
-    width: 20%;
-    text-align: center;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-top: 1px solid black;
-    overflow: hidden; }
-
-<<<<<<< HEAD
-.Reservations {
-  background-color: pink;
-  width: auto;
-  margin: 0 auto;
-  display: block;
-  height: auto; }
-
-=======
->>>>>>> 02c2d200f48c022e1d027f4b9698d576297807b0
 .food-photos {
   width: 30%;
   display: inline-block;
   float: right;
   border: 1px solid blue; }
-<<<<<<< HEAD
-=======
->>>>>>> fdfe16a771125e7c8ce2c7ff07a4d3fb4cd28cc9
-=======
->>>>>>> 02c2d200f48c022e1d027f4b9698d576297807b0
+
+.tabs {
+  display: block; }
+  .tabs li {
+    width: 100px;
+    display: inline-block;
+    border: 1px solid black;
+    text-align: center; }
+    .tabs li a {
+      text-decoration: none;
+      color: black; }

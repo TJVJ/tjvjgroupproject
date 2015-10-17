@@ -62,37 +62,41 @@
 
 <main class="bottom-page">
   <div class="menucontent">
-    <div class="menutabs">
-        <p>Our Story</p>
-        <p>Menu</p>
-        <p>Reservations</p>
+      <ul class='tabs'>
+        <li><a href='#tab1'>Tab 1</a></li>
+        <li><a href='#tab2'>Tab 2</a></li>
+        <li><a href='#tab3'>Tab 3</a></li>
+      </ul>
+    <div id='tab1'>
+      <form action="#">
+            <fieldset>
+              <label>Full Name<br></br>
+                <input type="text" name="full name"></input></label><br></br>
+              <label>Number of Guests<br></br>
+                <input type="text" name="numberofguests"></input></label><br></br>
+              <label>Date<br></br>
+                <input type="date" name="date"></input></label><br></br>
+              <label>Special Notes<br></b>
+                <p><textarea name="Special Notes" cols="40" rows="5"></textarea></p>
+
+                <p>Seating Preference</p>
+                  <select name="seatingpreference" placeholder="Indoor">
+                    <option value="Indoor">Indoor</option>
+                    <option value="Outdoor">Outdoor</option>
+                    <option value="Bar">Bar</option>
+                    <option value="None">None</option></label></select></p>
+
+
+                <p><input class="submit" type="submit" name="Reserve Table" value="Reserve Table"></input></p>
+            </fieldset>
+          </form>
     </div>
-    <div class="Reservations">
-
-        <form action="http://h.timw.co/tiy/group_project/reserve.html">
-          <fieldset>
-            <label>Full Name<br></br>
-              <input type="text" name="full name"></input></label><br></br>
-            <label>Number of Guests<br></br>
-              <input type="text" name="numberofguests"></input></label><br></br>
-            <label>Date<br></br>
-              <input type="date" name="date"></input></label><br></br>
-            <label>Special Notes<br></b>
-              <p><textarea name="Special Notes" cols="40" rows="5"></textarea></p>
-
-              <p>Seating Preference</p>
-                <select name="seatingpreference" placeholder="Indoor">
-                  <option value="Indoor">Indoor</option>
-                  <option value="Outdoor">Outdoor</option>
-                  <option value="Bar">Bar</option>
-                  <option value="None">None</option></label></select></p>
-
-
-              <p><input class="submit" type="submit" name="Reserve Table" value="Reserve Table"></input></p>
-          </fieldset>
-        </form>
-
-        </div>
+    <div id='tab2'>
+      <p>This is the 2nd tab.</p>
+    </div>
+    <div id='tab3'>
+      <p>And this is the 3rd tab.</p>
+    </div>
   </div>
   <div class="food-photos">
     <p>

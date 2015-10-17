@@ -87,5 +87,36 @@
     console.log(template);
     $('.special').append(template);
   };
+  
+  $('ul.tabs').each(function(){
 
+      var $active, $content, $links = $(this).find('a');
+
+      $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+      $active.addClass('active');
+
+      $content = $($active[0].hash);
+
+      // Hide the remaining content
+      $links.not($active).each(function () {
+        $(this.hash).hide();
+      });
+
+
+      $(this).on('click', 'a', function(e){
+        // Make the old tab inactive.
+        $active.removeClass('active');
+        $content.hide();
+
+        // Update the variables
+        $active = $(this);
+        $content = $(this.hash);
+
+        // Make the tab active.
+        $active.addClass('active');
+        $content.show();
+
+        e.preventDefault();
+      });
+    });
 }());
