@@ -87,7 +87,7 @@
     console.log(template);
     $('.special').append(template);
   };
-  
+
   $('ul.tabs').each(function(){
 
       var $active, $content, $links = $(this).find('a');
@@ -97,7 +97,7 @@
 
       $content = $($active[0].hash);
 
-      // Hide the remaining content
+      // Hiding other stuff
       $links.not($active).each(function () {
         $(this.hash).hide();
       });

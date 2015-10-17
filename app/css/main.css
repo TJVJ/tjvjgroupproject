@@ -207,14 +207,12 @@ main {
   margin: 0 auto;
   margin-left: 150px;
   margin-right: 150px;
-  border: 1px solid black;
   margin-top: 20px; }
 
 .menucontent {
   width: 65%;
   display: inline-block;
   float: left;
-  border: 1px solid red;
   margin-right: 5%; }
 
 .food-photos {
@@ -226,7 +224,8 @@ main {
 .tabs {
   display: block; }
   .tabs li {
-    width: 100px;
+    width: 150px;
+    padding: 5px;
     display: inline-block;
     border: 1px solid black;
     text-align: center; }

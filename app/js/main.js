@@ -76,7 +76,7 @@
 
     $content = $($active[0].hash);
 
-    // Hide the remaining content
+    // Hiding other stuff
     $links.not($active).each(function () {
       $(this.hash).hide();
     });
