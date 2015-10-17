@@ -53,7 +53,7 @@
       });
       _.filter(appetizers, function (item) {
         if (item.id === theSpecialId) {
-          var template = '\n            <p>' + obj.item + '</p>\n            <p>' + obj.description + '</p>\n            <p>' + obj.price + '</p>';
+          var template = '\n            <p>' + obj.item + '</p>\n            <p>' + obj.description + '</p>\n            <p>' + (obj.price + '........') + '</p>';
           doSomethings(template);
         };
       });

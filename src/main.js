@@ -74,7 +74,7 @@
           let template = `
             <p>${ obj.item }</p>
             <p>${ obj.description }</p>
-            <p>${ obj.price }</p>`;
+            <p>${ obj.price + '........' }</p>`;
           doSomethings(template);
         };
       });
