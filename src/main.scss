@@ -185,6 +185,7 @@ main {
     background-color: pink;
     border: 1px solid black;
     display: block;
+    // overflow: scroll;
   }
 }
 .background-img img{
@@ -230,7 +231,7 @@ main {
   margin: 0 auto;
   margin-left: 150px;
   margin-right: 150px;
-  border: 1px solid black;
+  // border: 1px solid black;
   margin-top: 20px;
 }
 
@@ -238,28 +239,45 @@ main {
   width: 65%;
   display: inline-block;
   float: left;
-  border: 1px solid red;
+  // border: 1px solid red;
   margin-right: 5%;
 }
 
-.menutabs {
-  height: 40px;
-  margin-bottom: 5px;
-  & p {
-    padding: 5px;
-    display: inline-block;
-    width: 20%;
-    text-align: center;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-top: 1px solid black;
-    overflow: hidden;
-  }
-}
+// .menutabs {
+//   height: 40px;
+//   margin-bottom: 5px;
+//   overflow: hidden;
+//   & p {
+//     padding: 5px;
+//     display: inline-block;
+//     width: 20%;
+//     text-align: center;
+//     border-left: 1px solid black;
+//     border-right: 1px solid black;
+//     border-top: 1px solid black;
+//     overflow: hidden;
+//   }
+// }
 
 .food-photos {
   width: 30%;
   display: inline-block;
   float: right;
   border: 1px solid blue;
+}
+
+//Tabs sytling
+.tabs {
+  display: block;
+  & li {
+    width: 150px;
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid black;
+    text-align: center;
+    & a {
+      text-decoration: none;
+      color: black;
+    }
+  }
 }
