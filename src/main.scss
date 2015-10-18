@@ -227,11 +227,9 @@ main {
 // Top Menu Buttons for different displays
 
 .bottom-page {
-  overflow: hidden;
-  margin: 0 auto;
-  margin-left: 150px;
-  margin-right: 150px;
-  // border: 1px solid black;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 20px;
 }
 
