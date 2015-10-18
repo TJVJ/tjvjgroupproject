@@ -74,7 +74,7 @@
           let template = `
             <p>${ obj.item }</p>
             <p>${ obj.description }</p>
-            <p>${ obj.price + '........' }</p>`;
+            <p>${ obj.price}</p>`;
           doSomethings(template);
         };
       });
@@ -87,6 +87,7 @@
     console.log(template);
     $('.special').append(template);
   };
+
 
   $('ul.tabs').each(function(){
 
@@ -197,4 +198,5 @@ let menuA = function (obj) {
     $('.entreestuff').append(menuE(objOfArrays));
     $('.sidestuff').append(menuS(objOfArrays));
   };
+
 }());
