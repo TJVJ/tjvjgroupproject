@@ -88,4 +88,115 @@
     $('.special').append(template);
   };
 
+
+  $('ul.tabs').each(function(){
+
+      var $active, $content, $links = $(this).find('a');
+
+      $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+      $active.addClass('active');
+
+      $content = $($active[0].hash);
+
+      // Hiding other stuff
+      $links.not($active).each(function () {
+        $(this.hash).hide();
+      });
+
+
+      $(this).on('click', 'a', function(e){
+        // Make the old tab inactive.
+        $active.removeClass('active');
+        $content.hide();
+
+        // Update the variables
+        $active = $(this);
+        $content = $(this.hash);
+
+        // Make the tab active.
+        $active.addClass('active');
+        $content.show();
+
+        e.preventDefault();
+      });
+    });
+    //Section 3 Menu
+var url3 = 'https://json-data.herokuapp.com/restaurant/menu/1';
+var promise3 = $.getJSON(url3);
+  promise3.then(function (obj) {
+    doSomething3(obj);
+  });
+
+let menuA = function (obj) {
+    let A = '';
+    _.each(obj.appetizers, function(obj){
+      A += `
+        <div class='eachapp'>
+          <p class='titleprice'>
+            <span class='eachtitle'>${ obj.item + ' ....................................................................................................'}</span>
+            <span class='eachprice'>${ obj.price }</span>
+          </p>
+          <div class='eachdescription'>${ obj.description }</div>
+            <div class='icons'>
+              <div class='allergy'></div>
+              <div class='fav'></div>
+              <div class='spicy'></div>
+              <div class='veg'></div>
+            </div>
+          </div>
+        </div>`;
+    });
+    return A;
+  };
+
+    let menuE = function (obj) {
+    let E = '';
+    _.each(obj.entrees, function(obj){
+      E += `
+        <div class='eachentree'>
+         <p class='titleprice'>
+            <span class='eachtitle'>${ obj.item + ' ....................................................................................................'}</span>
+            <span class='eachprice'>${ obj.price }</span>
+          </p>
+          <div class='eachdescription'>${ obj.description }</div>
+            <div class='icons'>
+              <div class='allergy'></div>
+              <div class='fav'></div>
+              <div class='spicy'></div>
+              <div class='veg'></div>
+            </div>
+          </div>
+        </div>`;
+    });
+    return E;
+  };
+
+    let menuS = function (obj) {
+    let S = '';
+    _.each(obj.sides, function(obj){
+      S += `
+        <div class='eachside'>
+          <p class='titleprice'>
+            <span class='eachtitle'>${ obj.item + ' ....................................................................................................'}</span>
+            <span class='eachprice'>${ obj.price }</span>
+          </p>
+          <div class='eachdescription'>${ obj.description }</div>
+            <div class='icons'>
+              <div class='allergy'></div>
+              <div class='fav'></div>
+              <div class='spicy'></div>
+              <div class='veg'></div>
+            </div>
+          </div>
+        </div>`;
+    });
+    return S;
+  };
+
+  let doSomething3 = function(objOfArrays) {
+    $('.appstuff').append(menuA(objOfArrays));
+    $('.entreestuff').append(menuE(objOfArrays));
+    $('.sidestuff').append(menuS(objOfArrays));
+  };
+
 }());

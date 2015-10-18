@@ -231,3 +231,13 @@ main {
     .tabs li a {
       text-decoration: none;
       color: black; }
+
+.menu {
+  text-align: left;
+  font-size: 14px; }
+
+.eachtitle {
+  display: inline-block; }
+
+.eachentree {
+  display: inline-block; }
