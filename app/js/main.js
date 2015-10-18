@@ -64,8 +64,6 @@
     console.log(template);
     $('.special').append(template);
   };
-<<<<<<< HEAD
-=======
 
   $('ul.tabs').each(function () {
 
@@ -135,5 +133,4 @@
     $('.entreestuff').append(menuE(objOfArrays));
     $('.sidestuff').append(menuS(objOfArrays));
   };
->>>>>>> 881e04c7c6a21e32855a0ed0c24de8556e4608ce
 })();
