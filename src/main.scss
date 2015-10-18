@@ -282,6 +282,15 @@ main {
   }
 }
 
+.active {
+  font-style: italic;
+  font-weight: bolder;
+}
+
+hr {
+  display: none;
+}
+
 //Menu Styling
 
 .menu {
