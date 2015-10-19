@@ -139,6 +139,7 @@
       return menuList;
     }
     return _.reduce(categoryItems, buildItem, '');
+
   };
 
   let handleMenuData = function(menuData) {
