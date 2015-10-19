@@ -246,6 +246,13 @@ main {
       text-decoration: none;
       color: black; }
 
+.active {
+  font-style: italic;
+  font-weight: bolder; }
+
+hr {
+  display: none; }
+
 .menu {
   text-align: left;
   font-size: 14px; }
