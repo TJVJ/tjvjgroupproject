@@ -82,121 +82,98 @@
     });
   });
 
-
   let doSomethings = function(template) {
     console.log(template);
     $('.special').append(template);
   };
 
-
   $('ul.tabs').each(function(){
+    var $active, $content, $links = $(this).find('a');
 
-      var $active, $content, $links = $(this).find('a');
+    $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+    $active.addClass('active');
 
-      $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
-      $active.addClass('active');
+    $content = $($active[0].hash);
 
-      $content = $($active[0].hash);
-
-      // Hiding other stuff
-      $links.not($active).each(function () {
-        $(this.hash).hide();
-      });
-
-
-      $(this).on('click', 'a', function(e){
-        // Make the old tab inactive.
-        $active.removeClass('active');
-        $content.hide();
-
-        // Update the variables
-        $active = $(this);
-        $content = $(this.hash);
-
-        // Make the tab active.
-        $active.addClass('active');
-        $content.show();
-
-        e.preventDefault();
-      });
+    // Hiding other stuff
+    $links.not($active).each(function () {
+      $(this.hash).hide();
     });
-    //Section 3 Menu
-var url3 = 'https://json-data.herokuapp.com/restaurant/menu/1';
-var promise3 = $.getJSON(url3);
-  promise3.then(function (obj) {
-    doSomething3(obj);
+
+
+    $(this).on('click', 'a', function(e){
+      // Make the old tab inactive.
+      $active.removeClass('active');
+      $content.hide();
+
+      // Update the variables
+      $active = $(this);
+      $content = $(this.hash);
+
+      // Make the tab active.
+      $active.addClass('active');
+      $content.show();
+
+      e.preventDefault();
+    });
   });
 
-let menuA = function (obj) {
-    let A = '';
-    _.each(obj.appetizers, function(obj){
-      A += `
-        <div class='eachapp'>
-          <p class='titleprice'>
-            <span class='eachtitle'>${ obj.item + ' ....................................................................................................'}</span>
-            <span class='eachprice'>${ obj.price }</span>
-          </p>
-          <div class='eachdescription'>${ obj.description }</div>
-            <div class='icons'>
-              <div class='allergy'></div>
-              <div class='fav'></div>
-              <div class='spicy'></div>
-              <div class='veg'></div>
-            </div>
+  let buildMenuList = (categoryItems) => {
+    let buildItem = function (menuList, item) {
+      menuList += `
+      <div class='eachapp'>
+        <p class='titleprice'>
+          <span class='eachtitle'>${ item.item + ' ....................................................................................................'}</span>
+          <span class='eachprice'>${ item.price }</span>
+        </p>
+        <div class='eachdescription'>${ item.description }</div>
+          <div class='icons'>
+            <div class='allergy'></div>
+            <div class='fav'></div>
+            <div class='spicy'></div>
+            <div class='veg'></div>
           </div>
-        </div>`;
-    });
-    return A;
+        </div>
+      </div>
+      `;
+      return menuList;
+    }
+    return _.reduce(categoryItems, buildItem, '');
   };
 
-    let menuE = function (obj) {
-    let E = '';
-    _.each(obj.entrees, function(obj){
-      E += `
-        <div class='eachentree'>
-         <p class='titleprice'>
-            <span class='eachtitle'>${ obj.item + ' ....................................................................................................'}</span>
-            <span class='eachprice'>${ obj.price }</span>
-          </p>
-          <div class='eachdescription'>${ obj.description }</div>
-            <div class='icons'>
-              <div class='allergy'></div>
-              <div class='fav'></div>
-              <div class='spicy'></div>
-              <div class='veg'></div>
-            </div>
-          </div>
-        </div>`;
-    });
-    return E;
+  let handleMenuData = function(menuData) {
+    let {
+      appetizers,
+      entrees,
+      sides
+    } = menuData;
+    let appetizersMenu = buildMenuList( appetizers );
+    let entreesMenu = buildMenuList( entrees );
+    let sidesMenu = buildMenuList( sides );
+    $('.appstuff').append( appetizersMenu );
+    $('.entreestuff').append( entreesMenu );
+    $('.sidestuff').append( sidesMenu );
   };
 
-    let menuS = function (obj) {
-    let S = '';
-    _.each(obj.sides, function(obj){
-      S += `
-        <div class='eachside'>
-          <p class='titleprice'>
-            <span class='eachtitle'>${ obj.item + ' ....................................................................................................'}</span>
-            <span class='eachprice'>${ obj.price }</span>
-          </p>
-          <div class='eachdescription'>${ obj.description }</div>
-            <div class='icons'>
-              <div class='allergy'></div>
-              <div class='fav'></div>
-              <div class='spicy'></div>
-              <div class='veg'></div>
-            </div>
-          </div>
-        </div>`;
-    });
-    return S;
-  };
+  //Section 3 Menu
+  let menuUrl = 'https://json-data.herokuapp.com/restaurant/menu/1';
+  $.getJSON(menuUrl).then(handleMenuData);
 
-  let doSomething3 = function(objOfArrays) {
-    $('.appstuff').append(menuA(objOfArrays));
-    $('.entreestuff').append(menuE(objOfArrays));
-    $('.sidestuff').append(menuS(objOfArrays));
-  };
+  var f = new flickr({
+      api_key: 'ddd216cce64def3f113c21f6425c283e',
+      api_secret: 'bcf2098767c8d317',
+      element: document.querySelector('.food-photos'),
+      callback: function(e){
+          console.log('Flickr Object', e);
+          console.log('Flickr Images', e.images);
+          e.append();
+          // If you don't want to append the images directly, you can use
+          // e.images this hold an array with the img DOM for your easy use ;)
+      }
+  });
+
+  f.photosSearch({
+    tags: 'food,appetizers'
+  });
 
 }());

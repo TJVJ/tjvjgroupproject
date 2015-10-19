@@ -214,6 +214,20 @@ main {
   float: left;
   margin-right: 5%; }
 
+.menutabs {
+  height: 40px;
+  margin-bottom: 5px;
+  overflow: hidden; }
+  .menutabs p {
+    padding: 5px;
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    overflow: hidden; }
+
 .food-photos {
   width: 30%;
   display: inline-block;

@@ -64,11 +64,8 @@
     console.log(template);
     $('.special').append(template);
   };
-<<<<<<< HEAD
-=======
 
   $('ul.tabs').each(function () {
-
     var $active,
         $content,
         $links = $(this).find('a');
@@ -99,41 +96,46 @@
       e.preventDefault();
     });
   });
+
+  var buildMenuList = function buildMenuList(categoryItems) {
+    var buildItem = function buildItem(menuList, item) {
+      menuList += '\n      <div class=\'eachapp\'>\n        <p class=\'titleprice\'>\n          <span class=\'eachtitle\'>' + (item.item + ' ....................................................................................................') + '</span>\n          <span class=\'eachprice\'>' + item.price + '</span>\n        </p>\n        <div class=\'eachdescription\'>' + item.description + '</div>\n          <div class=\'icons\'>\n            <div class=\'allergy\'></div>\n            <div class=\'fav\'></div>\n            <div class=\'spicy\'></div>\n            <div class=\'veg\'></div>\n          </div>\n        </div>\n      </div>\n      ';
+      return menuList;
+    };
+    return _.reduce(categoryItems, buildItem, '');
+  };
+
+  var handleMenuData = function handleMenuData(menuData) {
+    var appetizers = menuData.appetizers;
+    var entrees = menuData.entrees;
+    var sides = menuData.sides;
+
+    var appetizersMenu = buildMenuList(appetizers);
+    var entreesMenu = buildMenuList(entrees);
+    var sidesMenu = buildMenuList(sides);
+    $('.appstuff').append(appetizersMenu);
+    $('.entreestuff').append(entreesMenu);
+    $('.sidestuff').append(sidesMenu);
+  };
+
   //Section 3 Menu
-  var url3 = 'https://json-data.herokuapp.com/restaurant/menu/1';
-  var promise3 = $.getJSON(url3);
-  promise3.then(function (obj) {
-    doSomething3(obj);
+  var menuUrl = 'https://json-data.herokuapp.com/restaurant/menu/1';
+  $.getJSON(menuUrl).then(handleMenuData);
+
+  var f = new flickr({
+    api_key: 'ddd216cce64def3f113c21f6425c283e',
+    api_secret: 'bcf2098767c8d317',
+    element: document.querySelector('.food-photos'),
+    callback: function callback(e) {
+      console.log('Flickr Object', e);
+      console.log('Flickr Images', e.images);
+      e.append();
+      // If you don't want to append the images directly, you can use
+      // e.images this hold an array with the img DOM for your easy use ;)
+    }
   });
 
-  var menuA = function menuA(obj) {
-    var A = '';
-    _.each(obj.appetizers, function (obj) {
-      A += '\n        <div class=\'eachapp\'>\n          <p class=\'titleprice\'>\n            <span class=\'eachtitle\'>' + (obj.item + ' ....................................................................................................') + '</span>\n            <span class=\'eachprice\'>' + obj.price + '</span>\n          </p>\n          <div class=\'eachdescription\'>' + obj.description + '</div>\n            <div class=\'icons\'>\n              <div class=\'allergy\'></div>\n              <div class=\'fav\'></div>\n              <div class=\'spicy\'></div>\n              <div class=\'veg\'></div>\n            </div>\n          </div>\n        </div>';
-    });
-    return A;
-  };
-
-  var menuE = function menuE(obj) {
-    var E = '';
-    _.each(obj.entrees, function (obj) {
-      E += '\n        <div class=\'eachentree\'>\n         <p class=\'titleprice\'>\n            <span class=\'eachtitle\'>' + (obj.item + ' ....................................................................................................') + '</span>\n            <span class=\'eachprice\'>' + obj.price + '</span>\n          </p>\n          <div class=\'eachdescription\'>' + obj.description + '</div>\n            <div class=\'icons\'>\n              <div class=\'allergy\'></div>\n              <div class=\'fav\'></div>\n              <div class=\'spicy\'></div>\n              <div class=\'veg\'></div>\n            </div>\n          </div>\n        </div>';
-    });
-    return E;
-  };
-
-  var menuS = function menuS(obj) {
-    var S = '';
-    _.each(obj.sides, function (obj) {
-      S += '\n        <div class=\'eachside\'>\n          <p class=\'titleprice\'>\n            <span class=\'eachtitle\'>' + (obj.item + ' ....................................................................................................') + '</span>\n            <span class=\'eachprice\'>' + obj.price + '</span>\n          </p>\n          <div class=\'eachdescription\'>' + obj.description + '</div>\n            <div class=\'icons\'>\n              <div class=\'allergy\'></div>\n              <div class=\'fav\'></div>\n              <div class=\'spicy\'></div>\n              <div class=\'veg\'></div>\n            </div>\n          </div>\n        </div>';
-    });
-    return S;
-  };
-
-  var doSomething3 = function doSomething3(objOfArrays) {
-    $('.appstuff').append(menuA(objOfArrays));
-    $('.entreestuff').append(menuE(objOfArrays));
-    $('.sidestuff').append(menuS(objOfArrays));
-  };
->>>>>>> 881e04c7c6a21e32855a0ed0c24de8556e4608ce
+  f.photosSearch({
+    tags: 'food,appetizers'
+  });
 })();
