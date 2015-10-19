@@ -1,13 +1,163 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SAMPLE PROJECT</title>
+  <title>Blowfish</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Lato:900italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
+
+
 </head>
 <body>
 
-  <h1>Hello World</h1>
+<!-- Logo/Gif/Social-Media-Icons/Background-Img -->
+<main>
+    <div class="img-logo">
+    <img class="logo" src="images/reslogo.jpeg" alt="" />
+    <img class="blowfish-gif animated fadeInDown" src="images/blowfishgif.gif" alt="" />
+    <div class="social-media">
+      <span class="fontawesome-twitter"></span>
+      <span class="fontawesome-camera"></span>
+      <span class="fontawesome-facebook"></span>
+    </div>
+  </div>
+
+  <div class="border-top"></div>
+
+  <div class="background-img">
+    <img src="images/fine-dine.jpg" alt="Background Image" height="280px" width="980px">
+  </div>
+
+<!-- Latest News/Todays Special/Location -->
+  <div class="featured-boxes">
+    <div class="box">
+    <h1 style="margin-top: 15px; margin-bottom: 0px;">Latest News</h1>
+    <div class="border-box"></div>
+      <div class="news"></div>
+    </div>
+
+
+    <div class="box">
+      <h1 class="special-text" style="margin-top: 15px; padding-bottom: 0px;">Today's Special</h1>
+      <div class="border-box"></div>
+      <div class="special">
+        <div class="thephoto"></div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h1 style="margin-top: 15px; margin-bottom: 0px;">Our Location</h1>
+      <div class="border-box"></div>
+      <iframe height="130" width="300" frameborder="0" style="border:0 padding:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ5XKr84MD9YgRCbwJhQDwL6s&key=AIzaSyDJJ-Fq1XEk76W-_JDbuHJEPyblTvIZCSY" allowfullscreen></iframe>
+      <span class="address">115 M.L.K. Jr Dr NW, Atlanta, GA 30303</span>
+    <div class="number-map">
+      <span class="number">(770)751-8046 &#9679;</span>
+      <span class="map">Map &#9679;</span>
+      <span class="directions">Directions</span>
+    </div>
+  </div>
+  </div>
+</main>
+
+<!-- Mess Around -->
+<main class="bottom-page">
+
+
+<!-- Bottom Area - Tabs -->
+
+  <div class="menucontent">
+      <ul class='tabs'>
+        <li><a href='#tab1'>Our Story</a></li>
+        <li><a href='#tab2'>Menu</a></li>
+        <li><a href='#tab3'>Reservations</a></li>
+        <li><a href='#tab4'>Reviews</a></li>
+      </ul>
+    <div id='tab1'>
+      <p>Chef Vin de Jean-Taex was raised in Tibet by a group of hedonistic monks who all shared one thing in common: the love of fine food.  Unfortunately, living on a mountain and freezing your ass off does not always provide the mossiest creative environment; the journey from braised sheepshead over an open flame to the finest kitchen in Atlanta was both arduous and circuitous.</p>
+
+      <p>In 1997, the young genius backpacked his way to Eastern Europe eventually making his way to Prague.  At a chance encounter in a dank opium den, Jean-Taex met the famed restauranteur, Claude Tiersmacht.  A heated debate ensued over the proper way to prepare sweet-meats, but the the two immediately connected and a grand partnership was born.</p>
+
+      <p>On a ski weekend in Gstaad, Tiersmacht invited the young chef to partner with him on his newest venture, the famed Subway franchise in Akron on 18th Street.  Jean-Tex consented and the people of northern Ohio are forever thankful.</p>
+
+      <p>In 2012, Blowfish opened in downtown Atlanta to critical acclaim.  The AJC’s head restaurant critic, John Kessler proclaimed, ‘Never before have I eaten such fine food.  The world owes Blowfish a debt of gratitude’.  This prompted a visit by the Times’ Pete Wells to visit and announce, ‘I’m moving.  New York simply doesn’t offer anything of this caliber.  Brava!!!’.</p>
+
+      <p>At Blowfish, you will experience what critics and plebeians alike have noticed.  Simply put, Jean-Taex is a master at maintaining the essence of ingredients while using them inventively to produce the best flavor.  Tiersmacht’s chic and intimate dining room, designed by Thomas Juul‑Hansen, will be the finishing touch on a memorable evening, either spent with your lover, or your grandma … or both!  Come see, taste, and experience what is … Blowfish.</p>
+    </div>
+    <div id='tab2'>
+      <div class="menu">
+          <div class="apps">
+            <p>Our Dinner Selections...</p>
+            <hr></hr>
+            <p class="title">Appetizers</p>
+            <div class="appstuff"></div>
+          </div>
+          <div class="entrees">
+            <p class="title">Entrees</p>
+            <!-- Border -->
+            <div class="border-top"></div>
+            <div class="entreestuff"></div>
+          </div>
+          <div class="sides">
+            <p class="title">Sides</p>
+            <!-- Border -->
+            <div class="border-top"></div>
+            <div class="sidestuff"></div>
+          </div>
+        </div>
+    </div>
+    <div id='tab3'>
+      <form action="#">
+            <fieldset>
+              <label>Full Name<br></br>
+                <input type="text" name="full name"></input></label><br></br>
+              <label>Number of Guests<br></br>
+                <input type="text" name="numberofguests"></input></label><br></br>
+              <label>Date<br></br>
+                <input type="date" name="date"></input></label><br></br>
+              <label>Special Notes<br></b>
+                <p><textarea name="Special Notes" cols="40" rows="5"></textarea></p>
+
+                <p>Seating Preference</p>
+                  <select name="seatingpreference" placeholder="Indoor">
+                    <option value="Indoor">Indoor</option>
+                    <option value="Outdoor">Outdoor</option>
+                    <option value="Bar">Bar</option>
+                    <option value="None">None</option></label></select></p>
+
+
+                <p><input class="submit" type="submit" name="Reserve Table" value="Reserve Table"></input></p>
+            </fieldset>
+          </form>
+    </div>
+    <div id='tab4'>
+      <div id="disqus_thread"></div>
+    </div>
+  </div>
+  <div class="food-photos">
+
+  </div>
+</main>
+<footer>
+  <div class="copyright">
+    <span class="ourrest">2015 The Blowfish</span>
+  </div>
+</footer>
+
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'blowfishatl'; // Required - Replace '<example>' with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
